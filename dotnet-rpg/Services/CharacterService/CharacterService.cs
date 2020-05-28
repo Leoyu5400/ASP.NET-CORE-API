@@ -45,5 +45,45 @@ private static List<Character> characters = new List<Character> {
             serviceResponse.Data=_mapper.Map<GetCharacterDto>(characters.FirstOrDefault(a=>a.Id==id));
             return serviceResponse;
         }
+
+        public async Task<ServiceResponse<GetCharacterDto>> UpdateCharacter(UpdateCharacterDto updateCharacter)
+        {
+            ServiceResponse<GetCharacterDto> serviceResponse=new ServiceResponse<GetCharacterDto>();
+            try
+            {  
+            Character character=characters.FirstOrDefault(a=>a.Id==updateCharacter.Id);
+            character.Defense=updateCharacter.Defense;
+            character.HitPoints=updateCharacter.HitPoints;
+            character.Intelligence=updateCharacter.Intelligence;
+            character.Name=updateCharacter.Name;
+            character.Class=updateCharacter.Class;
+            character.Strength=updateCharacter.Strength;
+            serviceResponse.Data=_mapper.Map<GetCharacterDto>(character);
+             }
+            catch (System.Exception ex)
+            { 
+                 serviceResponse.Success=false;
+                 serviceResponse.Message=ex.Message;
+            }
+            return serviceResponse;
+        }
+
+        public async Task<ServiceResponse<List<GetCharacterDto>>> DeleteCharacter(int id)
+        {
+             ServiceResponse<List<GetCharacterDto>> serviceResponse=new ServiceResponse<List<GetCharacterDto>>();
+             try
+             {
+                 Character character=characters.First(a=>a.Id==id);
+                 characters.Remove(character);
+                 serviceResponse.Data=characters.Select(a=>_mapper.Map<GetCharacterDto>(a)).ToList();
+
+             }
+             catch (System.Exception ex)
+             {
+                serviceResponse.Success=false;
+                serviceResponse.Message=ex.Message;
+             }
+             return serviceResponse;
+        }
     }
 }

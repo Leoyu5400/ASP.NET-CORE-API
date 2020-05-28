@@ -36,6 +36,29 @@ public class CharacterController:ControllerBase
  {
    return Ok(await _characterService.AddCharacter(newCharacter));
  }
+
+ [HttpPut]
+ public async Task<IActionResult> UpdateCharacter(UpdateCharacterDto updateCharacter)
+ {
+    ServiceResponse<GetCharacterDto> serviceResponse= await _characterService.UpdateCharacter(updateCharacter);
+    if(serviceResponse.Data ==null)
+    {
+        return NotFound(serviceResponse);
+    }
+     return Ok(serviceResponse);
+ }
+
+ [HttpDelete]
+ public async Task<IActionResult> DeleteCharacter(int id)
+ {
+     ServiceResponse<List<GetCharacterDto>> serviceResponse= await _characterService.DeleteCharacter(id);
+     if(serviceResponse==null)
+     {
+         return NotFound(serviceResponse);
+
+     }
+     return Ok(serviceResponse);
+ }
 }
  
 }
