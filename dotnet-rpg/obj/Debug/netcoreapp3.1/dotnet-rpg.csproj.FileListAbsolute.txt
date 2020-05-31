@@ -74,3 +74,11 @@ D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\ASP.NET\dotnet-rpg\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
